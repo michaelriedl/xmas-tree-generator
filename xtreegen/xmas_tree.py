@@ -49,6 +49,8 @@ class XmasTree:
 
     @trunk_width.setter
     def trunk_width(self, value: int) -> None:
+        if type(value) is property:
+            value = XmasTree._trunk_width
         if value < 1:
             raise ValueError("Trunk width must be greater than 0")
         self._trunk_width = value
@@ -59,6 +61,8 @@ class XmasTree:
 
     @trunk_height.setter
     def trunk_height(self, value: int) -> None:
+        if type(value) is property:
+            value = XmasTree._trunk_height
         if value < 1:
             raise ValueError("Trunk height must be greater than 0")
         self._trunk_height = value
@@ -69,6 +73,8 @@ class XmasTree:
 
     @tree_width.setter
     def tree_width(self, value: int) -> None:
+        if type(value) is property:
+            value = XmasTree._tree_width
         if value < 1:
             raise ValueError("Tree width must be greater than 0")
         self._tree_width = value
@@ -81,6 +87,8 @@ class XmasTree:
 
     @tree_height.setter
     def tree_height(self, value: int) -> None:
+        if type(value) is property:
+            value = XmasTree._tree_height
         if value < 1:
             raise ValueError("Tree height must be greater than 0")
         self._tree_height = value
@@ -93,6 +101,8 @@ class XmasTree:
 
     @tree_levels.setter
     def tree_levels(self, value: int) -> None:
+        if type(value) is property:
+            value = XmasTree._tree_levels
         if value < 1:
             raise ValueError("Tree levels must be greater than 0")
         self._tree_levels = value
@@ -105,6 +115,8 @@ class XmasTree:
 
     @tree_line_width.setter
     def tree_line_width(self, value: int) -> None:
+        if type(value) is property:
+            value = XmasTree._tree_line_width
         if value < 1:
             raise ValueError("Tree line width must be greater than 0")
         self._tree_line_width = value
